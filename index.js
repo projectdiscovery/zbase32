@@ -11,9 +11,7 @@
 (function (factory) {
     const imports = ['require'];
 
-    if (typeof define === 'function' && define.amd) {
-        define(imports, factory);
-    } else if (typeof module === 'object' && module.exports) {
+    if (typeof module === 'object' && module.exports) {
         module.exports = factory(require);
     } else {
         console.log('Module system not recognized, please use AMD or CommonJS');
